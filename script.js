@@ -4,9 +4,7 @@ function adicionaItem(event) {
     const main = document.getElementById('container')
     const novoArticle = document.createElement('article');
     novoArticle.classList.add("item")
-    novoArticle.onclick = function removeItem(event){
-        event.target.remove()
-    }
+    novoArticle.addEventListener("click",removeItem);
     const novoTexto = document.createTextNode("Olá, Mundo!");
     novoArticle.appendChild(novoTexto)
     main.insertAdjacentElement('beforeend',novoArticle)
